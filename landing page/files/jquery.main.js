@@ -451,7 +451,7 @@ function initParalax() {
 		var decoration = holder.find('.austronaut');
 
 		function mousemoveHandler(e) {
-			decoration.parallax(5, e);
+			decoration.parallax(40, e);
 		}
 
 		jQuery(document).on('mousemove', mousemoveHandler);

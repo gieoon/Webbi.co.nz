@@ -293,10 +293,10 @@ body.homepage #nav .nav-opener span:before
     position: absolute;
     z-index: 11;
     bottom: 21%;
-    left: -27px;
+    right: -26%;
 
-    width: 156px;
-    height: 221px;
+    width: 10rem!important;
+    /* height: 221px; */
 }
 
 .stars-block
@@ -2609,9 +2609,8 @@ textarea:focus
     .austronaut
     {
         top: -100px;
-        left: -30%;
+        right: -26%;
 
-        width: 45%;
         margin: 0;
 
         -webkit-transform: translate3d(0, 0, 0);
@@ -3303,10 +3302,7 @@ textarea:focus
 
     .austronaut
     {
-        left: -46.5%;
-
-        width: 311px;
-        height: 442px;
+        right: -26.5%;
         z-index: 100;
     }
 
@@ -3632,7 +3628,7 @@ textarea:focus
 
     .austronaut
     {
-        top: 50%;
+        /* top: 50%; */
         bottom: auto;
 
         margin: -110px 0 0;
