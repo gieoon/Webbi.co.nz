@@ -2,6 +2,8 @@ jQuery(function() {
 	// Get IE or Edge browser version
 	var isIE = detectIE();
 
+	initMoonParallax();
+
 	//console.log(isIE);
 
 	if (!isIE) {
@@ -11,6 +13,8 @@ jQuery(function() {
 	}
 
 	initMobileNav();
+
+	
 
 	if (!isIE) {
 		initStarActive();
@@ -34,6 +38,19 @@ jQuery(function() {
 	initCustomForms();
 	initAnchors();
 });
+
+function initMoonParallax(){
+	// console.log('moon init')
+	document.getElementsByTagName("body")[0].onscroll = function myFunction() { 
+		// console.log('scrolling moon')
+		var scrolltotop = document.scrollingElement.scrollTop;
+		var target = document.getElementById("moon");
+		var xvalue = "center";
+		var factor = .75;
+		var yvalue = scrolltotop * factor;
+		target.style.backgroundPosition = xvalue + " " + yvalue + "px";
+	}
+}
 
 jQuery(window).on('load', function() {
 	initChangeColor();
@@ -74,7 +91,7 @@ function initNavAddClass() {
 			}
 		}
 
-		function resizeHanler() {
+		function resizeHandler() {
 			winHeight = win.height();
 			extraSpace = winHeight - (nav.offset().top - win.scrollTop()) - nav.innerWidth() - 20;
 			footerTop = footer.offset().top - winHeight;
@@ -84,7 +101,7 @@ function initNavAddClass() {
 
 		win.on('scroll', scrollhandler);
 		win.on('resize orientationchange', resizeHanler);
-		resizeHanler();
+		resizeHandler();
 	});
 }
 

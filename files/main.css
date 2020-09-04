@@ -27,6 +27,18 @@ h1
     margin: 0 0 14px;
 }
 
+* {
+    font-family: 'Lato', sans-serif!important;
+}
+
+.top-information h1, p {
+    text-align: left;
+}
+
+.top-information h1 {
+    font-size: 82px!important;
+}
+
 h2
 {
     font-size: 30px;
@@ -69,7 +81,7 @@ body {
     line-height: 28px;
 }
 
-body.homepage .top-inforamtiom
+body.homepage .top-information
 {
     height: 100vh;
     padding: 0;
@@ -78,14 +90,14 @@ body.homepage .top-inforamtiom
     background: #000;
 }
 
-body.homepage .top-inforamtiom h1
+body.homepage .top-information h1
 {
     color: #fff;
 }
 
-body.homepage .top-inforamtiom .container,
-body.homepage .top-inforamtiom .row,
-body.homepage .top-inforamtiom .column
+body.homepage .top-information .container,
+body.homepage .top-information .row,
+body.homepage .top-information .column
 {
     height: 100%;
 }
@@ -209,16 +221,20 @@ body.homepage #nav .nav-opener span:before
     background: #000;
 }
 
+#moon {
+    pointer-events: none;
+}
+
 #main
 {
     width: 100%;
 }
 
-.top-inforamtiom
+.top-information
 {
     position: relative;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 
     padding: 150px 0 80px;
 
@@ -226,26 +242,26 @@ body.homepage #nav .nav-opener span:before
     background-size: cover;
 }
 
-.top-inforamtiom h1
+.top-information h1
 {
     color: #fff;
 }
 
-.top-inforamtiom p
+.top-information p
 {
     margin: 0;
 
     color: #fff;
 }
 
-.top-inforamtiom .column
+.top-information .column
 {
     text-align: center;
     text-align: center;
     white-space: nowrap;
 }
 
-.top-inforamtiom .column:after
+.top-information .column:after
 {
     display: inline-block;
 
@@ -256,7 +272,7 @@ body.homepage #nav .nav-opener span:before
     vertical-align: middle;
 }
 
-.top-inforamtiom .column > *
+.top-information .column > *
 {
     display: inline-block;
 
@@ -266,13 +282,13 @@ body.homepage #nav .nav-opener span:before
     white-space: normal;
 }
 
-.top-inforamtiom .text-block
+.top-information .text-block
 {
     width: 100%;
     max-width: 100%;
 }
 
-.top-inforamtiom .text-block .holder
+.top-information .text-block .holder
 {
     position: relative;
     z-index: 12;
@@ -290,12 +306,19 @@ body.homepage #nav .nav-opener span:before
 
 .austronaut
 {
+    background-image: url("/images/moon_half.png");
+    background-attachment: scroll;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400vh!important;
+    /* width: 125px!important; */
     position: absolute;
-    z-index: 11;
+    z-index: 10;
     bottom: 21%;
     right: -26%;
 
-    width: 10rem!important;
+    width: 8rem!important;
     /* height: 221px; */
 }
 
@@ -592,52 +615,103 @@ body.homepage #nav .nav-opener span:before
     margin: 0 0 45px;
 }
 
-.stuff-carousel
-{
-    position: relative;
-
-    padding-bottom: 60px;
+.section-title {
+    font-weight: 800;
+    /* color: #FFBD68; */
 }
 
-.stuff-carousel .slide
-{
-    float: left;
-    overflow: hidden;
+.works-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.works {
+    border-radius: 6px;
+    transition: all 150ms linear;
+    cursor: pointer;
+    position: relative;
+}
+
+.works .overlay {
+    opacity: 0;
+    background-color: rgba(0,0,0,.85);
     width: 100%;
-    width: 235px;
-    height: 235px;
-    margin: 0 8px;
-
-    text-align: center;
-
-    background: #fff;
-}
-
-.stuff-carousel .slide a
-{
-    position: relative;
-
-    display: block;
-    overflow: hidden;
-
     height: 100%;
-
-    color: #fff;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 999;
+    border-radius: 4px;
+    transition: all 125ms linear;
 }
 
-.stuff-carousel .slide.hover a
-{
+.works:hover .overlay {
     opacity: 1;
-    color: #fff;
 }
 
-.stuff-carousel .slide.hover .hover-block
-{
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+.works-title:hover {
+    /* opacity: .5; */
+}
 
+.works:hover .works-title {
+    transform: translateY(30%);
     opacity: 1;
+}
+
+.works-title {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9999;
+    transform: translateY(0);
+    transition: all 125ms linear;
+    opacity: 0;
+    padding: 8px;
+    line-height: 1.2;
+}
+
+.works-title a {
+    color: white!important;
+}
+
+.works-title .title {
+    margin-bottom: .5rem;
+    color: #FFBD69;
+}
+
+.works-title .subtitle {
+    font-size: 1.1rem;
+    display: block;
+    line-height: 1.2;
+}
+
+@media screen and (max-width: 769px){
+    .works {
+        width: 45vw;
+        margin: 4px;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .works {
+        width: 27vw;
+        margin: 4px;
+    }
+}
+
+.image-holder {
+    border-radius: 4px;
+}
+
+.image-holder img {
+    /* object-fit: cover;
+    max-height: 100%;
+    margin-left: -50%;
+    max-width: none!important; */
 }
 
 .stuff-carousel .slide.hover .image-holder
@@ -646,14 +720,16 @@ body.homepage #nav .nav-opener span:before
             transform: translateY(100%);
 
     opacity: 0;
+    
 }
 
 .stuff-carousel .image-holder
 {
     display: block;
-
     height: 100%;
-    padding: 5px;
+    /* padding: 5px; */
+    border-radius: 4px;
+    overflow: hidden;
 
     transition: opacity .4s ease 0s, -webkit-transform .4s ease 0s;
     transition: transform .4s ease 0s, opacity .4s ease 0s;
@@ -2019,10 +2095,19 @@ body.homepage #nav .nav-opener span:before
     opacity: 1;
 }
 
+.pattern-section {
+    /* background-image: url('/images/background.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center; */
+}
+
 #footer
 {
-    font-size: 12px;
-    line-height: 23px;
+    font-size: 18px;
+    /* line-height: 23px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     overflow: hidden;
 
@@ -2031,7 +2116,15 @@ body.homepage #nav .nav-opener span:before
     text-align: center;
 
     color: #fff;
-    background: #242424;
+    /* color: #FFBD69!important; */
+    /* background: #242424; */
+    /* background: #FFBD59; */
+    background: black;
+
+    /* background-image: url('/images/background.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain; */
 }
 
 #footer .container
@@ -2043,10 +2136,17 @@ body.homepage #nav .nav-opener span:before
 #footer p
 {
     margin: 0;
+    margin-bottom: 16px;
+}
+
+#footer svg {
+    margin-bottom: -6px;
+    margin-right: 6px;
 }
 
 #footer a
 {
+    /* color: #FFBD69; */
     color: #fff;
 }
 
@@ -2095,9 +2195,11 @@ body.homepage #nav .nav-opener span:before
     content: '';
 }
 
-.copyright-holder
+.copyright
 {
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    font-weight: 800;
+    font-size: 22px;
 }
 
 .jcf-checkbox
@@ -2560,7 +2662,7 @@ textarea:focus
         line-height: 44px;
     }
 
-    body.homepage .top-inforamtiom
+    body.homepage .top-information
     {
         min-height: 500px;
     }
@@ -2588,19 +2690,19 @@ textarea:focus
         padding: 270px 0 122px;
     }
 
-    .top-inforamtiom .container,
-    .top-inforamtiom .row,
-    .top-inforamtiom .column
+    .top-information .container,
+    .top-information .row,
+    .top-information .column
     {
         height: 100%;
     }
 
-    .top-inforamtiom .column
+    .top-information .column
     {
         text-align: left;
     }
 
-    .top-inforamtiom
+    .top-information
     {
         height: 100vh;
         padding: 0;
@@ -2608,7 +2710,7 @@ textarea:focus
 
     .austronaut
     {
-        top: -100px;
+        top: -25px;
         right: -26%;
 
         margin: 0;
@@ -2670,15 +2772,17 @@ textarea:focus
         padding: 0 15px;
     }
 
-    .abbr-list .letter
+    .abbr-list .letter img
     {
-        font-size: 120px;
-        line-height: 122px;
+        max-width: 9rem!important;
+        /* font-size: 120px; */
+        /* line-height: 122px; */
     }
 
     .abbr-list .letter-explanation
     {
         padding: 0 0 20px;
+        font-weight: 800;
     }
 
     .abbr-list
@@ -3286,7 +3390,7 @@ textarea:focus
         line-height: 36px;
     }
 
-    body.homepage .top-inforamtiom h1
+    body.homepage .top-information h1
     {
         line-height: 93px;
 
@@ -3303,7 +3407,7 @@ textarea:focus
     .austronaut
     {
         right: -26.5%;
-        z-index: 100;
+        z-index: 10;
     }
 
     .abbr-list .letter
@@ -3330,9 +3434,11 @@ textarea:focus
 
     .stuff-carousel .slide
     {
-        width: 298px;
-        height: 298px;
+        display: flex;
+        flex-wrap: wrap;
+        /* height: 298px; */
         margin: 0 18px 40px;
+        border-radius: 4px;
     }
 
     .stuff-carousel

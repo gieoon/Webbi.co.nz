@@ -17,14 +17,22 @@
 <meta property="business:contact_data:region" content="Nelson">
 <meta property="business:contact_data:postal_code" content="7020">
 <meta property="business:contact_data:country_name" content="New Zealand">
-<link rel="icon" type="image/x-icon" href="https://webbi.co.nz/icon.png">
+<link rel="icon" type="image/x-icon" href="https://webbi.co.nz/images/icon.png">
   <link href="./files/css" rel="stylesheet">
   <link href="./files/css(1)" rel="stylesheet">
   <link rel="stylesheet" href="./files/ionicons.css">
   <link rel="stylesheet" href="./files/bootstrap-extended.css">
   <link rel="stylesheet" href="./files/main.css">
-  <script type="text/javascript" async="" src="./files/js"></script><script type="text/javascript" async="" src="./files/analytics.js"></script><script src="./files/sdk.js" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./files/sdk(1).js"></script><script type="text/javascript" src="./files/three.min.js" defer=""></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;800&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" async="" src="./files/js"></script><script type="text/javascript" async="" src="./files/analytics.js"></script>
+  <!-- <script src="./files/sdk.js" async="" crossorigin="anonymous"></script> -->
+  <!-- <script id="facebook-jssdk" src="./files/sdk(1).js"></script> -->
+  <script type="text/javascript" src="./files/three.min.js" defer=""></script>
   <script type="text/javascript" src="./files/detector.js" defer=""></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
   <script id="vs" type="x-shader/x-vertex" defer="">
     varying vec2 vUv;
     void main() {
@@ -87,31 +95,31 @@ gtag('js', new Date());
             <a class="navbar-brand change-color" href="https://webbi.co.nz">
               <picture class="white-logo">
                 <!--[if IE 9]><video style="display: none;"><![endif]-->
-                <source srcset="images/icon.png, images/logo-white-small-2x.png 2x" media="(max-width: 767px)">
+                <source srcset="images/icon.png, images/iconx.png 2x" media="(max-width: 767px)">
                 <source srcset="images/icon.png">
                 <!--[if IE 9]></video><![endif]-->
                 <img src="./images/icon.png" alt="Webbi">
               </picture>
               <picture class="black-logo">
                 <!--[if IE 9]><video style="display: none;"><![endif]-->
-                <source srcset="images/icon.png, images/logo-dark-small-2x.png 2x" media="(max-width: 767px)">
+                <source srcset="images/icon.png, images/icon.png 2x" media="(max-width: 767px)">
                 <source srcset="images/icon.png">
                 <!--[if IE 9]></video><![endif]-->
                 <img src="./images/icon.png" alt="Webbi">
               </picture>
              </a>
           </div>
-          <a class="nav-opener change-color" href="https://webbi.co.nz"><span></span></a>
+          <a class="nav-opener change-color" href="/"><span></span></a>
           <nav id="nav">
             <div class="nav-container">
-              <a class="nav-opener" href="https://webbi.co.nz"><span></span></a>
+              <a class="nav-opener" href="/"><span></span></a>
               <div class="nav-holder">
                 <ul class="nav navbar-nav">
-                  <li><a href="https://webbi.co.nz/#What-we-do">Who we are</a></li>
-                  <li><a href="https://webbi.co.nz/#How-we-do-it">How we work</a></li>
-                  <li><a href="https://webbi.co.nz/whatwedo">What we do</a></li>
-                  <li><a href="https://webbi.co.nz/#Stuff-that-worked">Stuff that worked</a></li>
-                  <li><a href="https://webbi.co.nz/#Let%E2%80%99s-talk">Let’s talk</a></li>
+                  <li><a href="#What-we-do">Who we are</a></li>
+                  <li><a href="#How-we-do-it">How we work</a></li>
+                  <li><a href="#whatwedo">What we do</a></li>
+                  <li><a href="#Stuff-that-worked">Stuff that worked</a></li>
+                  <li><a href="#Let%E2%80%99s-talk">Let’s talk</a></li>
                 </ul>
               </div>
             </div>
@@ -120,7 +128,7 @@ gtag('js', new Date());
       </div>
     </header>
     <main id="main" role="main">
-      <section class="top-inforamtiom">
+      <section class="top-information">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 column">
@@ -128,19 +136,11 @@ gtag('js', new Date());
                 <div class="text-wrapper">
                   <div class="holder">
                     <!--h1>We build transformative experiences</h1-->
-                    <h1>Make your website stand out.</h1>
-                    <p>Webbi Digital Design</p>
+                    <h1>Make <br/>Yourself <br/>Seen.</h1>
+                    <p>Grow your business with a powerful image that speaks who you are and what you represent.</p>
                   </div>
                   <!-- style="transform: translate3d(76.4936px, 86.6725px, 0px);" -->
-                  <div class="austronaut">
-                    <picture>
-                      <!--[if IE 9]><video style="display: none;"><![endif]-->
-                      <source srcset="images/moon/half.png, images/image-astronaut-small-2x.png 2x" media="(max-width: 767px)">
-                      <source srcset="images/moon_half.png">
-                      <!--[if IE 9]></video><![endif]-->
-                      <img src="./files/moon_half.png" alt="Moon">
-                    </picture>
-                  </div>
+                  <div class="austronaut" id="moon"></div>
                 </div>
               </div>
             </div>
@@ -153,46 +153,64 @@ gtag('js', new Date());
           <div class="row">
             <div class="col-xs-12 col-sm-5 col-sm-offset-1 title-col">
               <!-- <h2>We can design your online image.</h2> -->
-              <h2>Bring your idea down from the clouds.</h2>
+              <h2>Create a unique digital presence.</h2>
             </div>
             <div class="col-xs-12 col-sm-5 description">
-                <p>As more businesses move online it's crucial to adopt a website to get your product out there and reach new people.
+              <p>
+                We develop websites to help reach more people.
                 <br/><br/>
-                In many cases, a website is the first thing a potential customer will see of what you represent. Nail this image and make your clients return constantly.
-                </p>
+                More and more businesses are moving online so it's crucial to adopt a website that speaks who you are and represents your values.
+                <br/><br/>
+                In many cases, a website is the first image of you a potential customer will see. 
+                <!-- Nail this image and  -->
+                Make it speak volumes.
+              </p>
 		            <!-- <p>Not in a rush? Here’s a bit more about <a href="https://webbi.co.nz/about">who we are.</a><br></p> -->
             </div>
           </div>
         </div>
-        <div id="clouds" style="background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAPSCAYAAAAayNh7AAACQUlEQVR4Xu3QQREAAAABQfqXFsNnFTizzXk99+MAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQGB3rQPTUy1EXwAAAABJRU5ErkJggg==&quot;) 0% 0% / 32px 100%;"><canvas width="1920" height="929" style="width: 1920px; height: 929px;"></canvas></div>
-        <div class="cloud-holder">
-         <img src="./images/clouds.png" alt="image description" width="1768" height="522">
-       </div>
+        
+        <!-- <div id="clouds" style="background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAPSCAYAAAAayNh7AAACQUlEQVR4Xu3QQREAAAABQfqXFsNnFTizzXk99+MAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQGB3rQPTUy1EXwAAAABJRU5ErkJggg==&quot;) 0% 0% / 32px 100%;">
+          <canvas width="1920" height="929" style="width: 1920px; height: 929px;">
+          </canvas>
+        </div> -->
+
+        <!-- <div class="cloud-holder"> -->
+         <!-- <img src="./images/clouds.png" alt="image description" width="1768" height="522"> -->
+        <!-- </div> -->
       </section>
       <div class="container" id="How-we-do-it">
         <div class="row">
           <div class="col-xs-12 text-center">
             <div class="intro-section">
-              <h2>Put simply, we are nerds.</h2>
+              <h2 class="section-title">We cater to all requirements</h2>
               <ul class="abbr-list list-unstyled">
                 <li>
-                  <span class="letter">N</span>
+                  <span class="letter">
+                    <img src="./images/time.svg" alt="" />
+                  </span>
                   <span class="letter-explanation">Changes in 2 minutes</span>
-                  <p>Easy maintenance. There's no need to contact us or a content manager each time you want to make an update. We've got a super easy system to let you make the changes you need instantly.</p>
+                  <p>There's no need to contact us or a content manager each time you want to make an update. We've got a super easy system to let you make the changes you need instantly.</p>
                 </li>
                 <li>
-                  <span class="letter">N</span>
+                  <span class="letter">
+                    <img src="./images/piggybank.svg" alt="" />
+                  </span>
                   <span class="letter-explanation">Affordable</span>
                   <p>We offer competitive pricing and are confident of our quality.</p>
                 </li>
                 <li>
-                  <span class="letter">e</span>
-                  <span class="letter-explanation">Unique product</span>
+                  <span class="letter">
+                    <img src="./images/different.svg" alt="" />
+                  </span>
+                  <span class="letter-explanation">Unique</span>
                   <p>Your website will be custom designed and unique to your vision and what you want to achieve.</p>
                 </li>
                 <li>
-                  <span class="letter">r</span>
-                  <span class="letter-explanation">Scaling</span>
+                  <span class="letter">
+                    <img src="./images/rocket.svg" alt="" />
+                  </span>
+                  <span class="letter-explanation">Fast Scaling</span>
                   <p>We have the skills available to help you scale your website to a full platform should the need arise. You can sit back and elt us take care of all of the technical challenges.</p>
                 </li>
               </ul>
@@ -205,73 +223,132 @@ gtag('js', new Date());
         <div class="container">
           <div class="row">
             <div class="col-xs-12 column text-center">
-              <h2>Our work</h2>
+              <h2 class="section-title">Our work</h2>
               <div class="stuff-carousel load-more-holder">
-                <div class="slick-slider">
-                  <div class="slide">
-                    <a popup-src="inc/fwbc-onsite" href="https://webbi.co.nz/#">
-                      <span class="hover-block">
-                        <span class="title">FWBC OnSite App</span>
+                <div class="works-wrapper">
+                  <div class="works">
+                      <span class="works-title">
+                        <a href="https://justsayheyy.com" target="_blank" rel="noopener noreferrer">
+                          <span class="title">Just Say Heyy</span>
+                          <span class="subtitle">Signup page to help users meet new people.</span>
+                        </a>
                       </span>
+                      <div class="overlay"></div>
                       <span class="image-holder">
-                        <picture>
-                          <!--[if IE 9]><video style="display: none;"><![endif]-->
-                          <source srcset="images/FWBC.jpg, images/FWBC.jpg 2x" media="(max-width: 767px)">
-                          <source srcset="images/FWBC.jpg">
-                          <!--[if IE 9]></video><![endif]-->
-                          <img src="./files/FWBC.jpg" alt="FWBC OnSite App">
-                        </picture>
+                        <img src="./images/works/justsayheyy.png" alt="Just Say Heyy">
                       </span>
-                    </a>
                   </div>
-                  <div class="slide">
-                    <a popup-src="inc/monster" href="https://webbi.co.nz/#">
-                      <span class="hover-block">
-                        <span class="title">Monster Worldwide Learning Platform</span>
-                      </span>
-                      <span class="image-holder">
-                        <picture>
-                          <!--[if IE 9]><video style="display: none;"><![endif]-->
-                          <source srcset="images/monster.jpg, images/monster.jpg 2x" media="(max-width: 767px)">
-                          <source srcset="images/monster.jpg">
-                          <!--[if IE 9]></video><![endif]-->
-                          <img src="./files/monster.jpg" alt="Monster Worldwide Recruitment Learning Platform">
-                        </picture>
-                      </span>
-                    </a>
+                  <div class="works">
+                    <span class="works-title">
+                      <a href="https://reeftonhideaway.com" target="_blank" rel="noopener noreferrer">
+                        <span class="title">Reefton Hideaway</span>
+                        <span class="subtitle">Accomodation on New Zealand's West Coast.</span>
+                      </a>
+                    </span>
+                    <div class="overlay"></div>
+                    <span class="image-holder">
+                      <img src="./images/works/reeftonhideaway.png" alt="Reefton Hideaway">
+                    </span>
                   </div>
-                  <div class="slide">
-                    <a popup-src="inc/nokia-inhindsight" href="https://webbi.co.nz/#">
-                      <span class="hover-block">
-                        <span class="title">In Hindsight for Nokia</span>
+                  <div class="works">
+                    <span class="works-title">
+                      <a href="https://nzcommute.com" target="_blank" rel="noopener noreferrer">
+                        <span class="title">NZ Commute</span>
+                        <span class="subtitle">Map solution visualizaing Kiwi's commutes.</span>
+                      </a>
+                    </span>
+                    <div class="overlay"></div>
+                    <span class="image-holder">
+                      <img src="./images/works/nzcommute.png" alt="NZ Commute">
+                    </span>
+                  </div>
+                  <div class="works">
+                    <span class="works-title">
+                      <a href="https://process-hub.com" target="_blank" rel="noopener noreferrer">
+                        <span class="title">ProcessHub</span>
+                        <span class="subtitle">Signup page for chrome extension automating tasks.</span>
+                      </a>
+                    </span>
+                    <div class="overlay"></div>
+                    <span class="image-holder">
+                      <img src="./images/works/processhub.png" alt="ProcessHub">
+                    </span>
+                  </div>
+                  <div class="works">
+                    <span class="works-title">
+                      <a href="https://imhired.com" target="_blank" rel="noopener noreferrer">
+                        <span class="title">Hired!</span>
+                        <span class="subtitle">Coming soon page for Unique recruitment concept targeting recent Graduates.</span>
+                      </a>
+                    </span>
+                    <div class="overlay"></div>
+                    <span class="image-holder">
+                      <img src="./images/works/imhired.png" alt="Hired!">
+                    </span>
+                  </div>
+                  <div class="works">
+                    <span class="works-title">
+                      <a href="https://whowrotethistext.com" target="_blank" rel="noopener noreferrer">
+                        <span class="title">Who Wrote This Text</span>
+                        <span class="subtitle">Can you discern which text was written by a human?</span>
+                      </a>
+                    </span>
+                    <div class="overlay"></div>
+                    <span class="image-holder">
+                      <img src="./images/works/whowrotethistext.png" alt="Who Wrote This Text">
+                    </span>
+                  </div>
+                  <div class="works">
+                    <span class="works-title">
+                      <a href="http://www.jtb-newzealand.com/jun" target="_blank" rel="noopener noreferrer">
+                        <span class="title">J-Signal</span>
+                        <span class="subtitle">Geolocation website mapping out client locations for safety.</span>
+                      </a>
+                    </span>
+                    <div class="overlay"></div>
+                    <span class="image-holder">
+                      <img src="./images/works/j-signal2.png" alt="J-Signal">
+                    </span>
+                  </div>
+                  
+                  <div class="works">
+                      <span class="works-title">
+                        <a href="https://nz.covid19live.com" target="_blank" rel="noopener noreferrer">
+                          <span class="title">NZ COVID19 Live</span>
+                          <span class="subtitle">Visualizing COVID19 in New Zealand.</span>
+                        </a>
                       </span>
+                      <div class="overlay"></div>
                       <span class="image-holder">
-                        <picture>
-                          <!--[if IE 9]><video style="display: none;"><![endif]-->
-                          <source srcset="images/nokia.jpg, images/nokia.jpg 2x" media="(max-width: 767px)">
-                          <source srcset="images/nokia.jpg">
-                          <!--[if IE 9]></video><![endif]-->
-                          <img src="./files/nokia.jpg" alt="Nokia">
-                        </picture>
+                        <img src="./images/works/nzcovid19live.png" alt="New Zealand COVID19 Charts & Visualizations">
                       </span>
-                    </a>
+                  </div>
+                  <div class="works">
+                      <span class="works-title">
+                        <a href="https://covid19live.com" target="_blank" rel="noopener noreferrer">
+                          <span class="title">COVID 19 Live</span>
+                          <span class="subtitle">Visualizing COVID19 across the globe.</span>
+                        </a>
+                      </span>
+                      <div class="overlay"></div>
+                      <span class="image-holder">
+                        <img src="./images/works/covid19live.png" alt="New Zealand COVID19 Charts & Visualizations">
+                      </span>
                   </div>
                 </div>
-                <!-- <a class="load-more ion-ios-arrow-down" href="https://webbi.co.nz/inc/more-slides">Want more</a> -->
-                <p class="load-more"><b>Ask us about more work we have completed.</b></p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="form-section" id="Let’s-talk">
+      <section class="form-section " id="Let’s-talk">
         <form action="https://webbi.co.nz/mail.php" method="post" enctype="multipart/form-data" target-page="thankyou" class="step-form form-validation">
           <fieldset>
             <div class="container steps-holder">
               <div class="row">
                 <div class="col-xs-12 text-center">
-                  <h2>Get in Touch</h2>
-                  <p>Check out <a href="https://webbi.co.nz/whatwedo">what we do</a>, drop your brief below or <a href="https://webbi.co.nz/showmethemoney">get an instant quote</a>.</p>
+                  <h2 class="section-title">Get in Touch</h2>
+                  <p>Contact us and get an instant quote.</p>
                 </div>
               </div>
               <div class="row steps-row">
@@ -293,35 +370,35 @@ gtag('js', new Date());
                     <span class="label-col">I need help with a:</span>
                     <div class="check-row">
                       <span class="jcf-checkbox jcf-checked"><span></span><input data-type="at_least_one" name="needs[]" value="website" data-name="uniq____" id="id-check1" checked="checked" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check1" class="jcf-label-active">website</label>
+                      <label for="id-check1" class="jcf-label-active">Website</label>
                     </div>
                     <div class="check-row">
                       <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="mobile app" data-name="uniq____" id="id-check2" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check2">mobile app</label>
+                      <label for="id-check2">Mobile Application</label>
                     </div>
-                    <div class="check-row">
+                    <!-- <div class="check-row">
                       <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="digital strategy" data-name="uniq____" id="id-check3" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
                       <label for="id-check3">digital strategy</label>
-                    </div>
-                    <div class="check-row">
+                    </div> -->
+                    <!-- <div class="check-row">
                       <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="banner campaign" data-name="uniq____" id="id-check4" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
                       <label data-required="true" for="id-check4">banner campaign</label>
-                    </div>
+                    </div> -->
                     <div class="check-row">
                       <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="brand design" data-name="uniq____" id="id-check5" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check5">brand design</label>
+                      <label for="id-check5">Brand Design</label>
                     </div>
-                    <div class="check-row">
+                    <!-- <div class="check-row">
                       <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="video" data-name="uniq____" id="id-check6" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
                       <label for="id-check6">video</label>
-                    </div>
-                    <div class="check-row">
+                    </div> -->
+                    <!-- <div class="check-row">
                       <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="digital newsletter" data-name="uniq____" id="id-check7" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
                       <label for="id-check7">digital newsletter</label>
-                    </div>
+                    </div> -->
                     <div class="check-row">
                       <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="not sure" data-name="uniq____" id="id-check8" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check8">not sure, help!</label>
+                      <label for="id-check8">Not sure, discuss a strategy</label>
                     </div>
                     <div class="btn-holder text-center">
                       <a href="https://webbi.co.nz/#" class="next-step open item-link ion-ios-arrow-thin-right">Next step</a>
@@ -344,57 +421,29 @@ gtag('js', new Date());
     </main>
     <footer id="footer">
       <div class="container">
-        <div class="row align-bottom">
-          <div class="col-xs-12 col-sm-5 col-md-2 col-md-offset-1">
-            <!--address--><p><strong>34 Olympus Way, Richmond, Nelson, New Zealand, 7020</strong>
-              <!--18a, 617 Elizabeth St Redfern NSW 2016-->
-              <br>
-              <!-- <strong>Los Angeles</strong></p> -->
-              <!--Coming Soon></address-->
-          </div>
-          <div class="col-xs-12 col-sm-3 col-md-2">
-            <p><a href="tel:+61296902592">(+64) 022-091-0069</a><br>
-              <!-- <a href="tel:+640220910069">+64 022-091-0069 (New Zealand)</a></p> -->
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-6 copyright-holder">
-                        <span class="copyright">© Webbi 2020</span>
-          </div>
+        <div class="pattern-section">
+            <p><i data-feather="home"></i><strong>34 Olympus Way, Richmond, Nelson, New Zealand, 7020</strong></p>
+            <p>
+              <i data-feather="phone"></i>
+              <a href="tel:+61296902592">(+64) 022-091-0069</a>
+            </p>
+            <p>
+              <a href="mailto:jun.a.kagaya@gmail.com">
+                <i data-feather="mail"></i>
+                jun.a.kagaya@gmail.com
+              </a>
+            </p>
+            <p>Icons made by <a href="https://www.flaticon.com/free-icon/product_2362021?term=different&page=1&position=4" title="ultimatearm">ultimatearm</a>, <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+          <!-- <div class="col-xs-12 col-sm-3 col-md-2"> -->
+            
+            <p class="copyright">© Webbi 2020</p>
         </div>
       </div>
     </footer>
   </div>
-  /*chatbot*/
-  <!-- <script>
-      window.fbMessengerPlugins = window.fbMessengerPlugins || {
-        init: function () {
-          FB.init({
-            appId            : '1678638095724206',
-            autoLogAppEvents : true,
-            xfbml            : true,
-            version          : 'v3.0'
-          });
-        }, callable: []
-      };
-      window.fbAsyncInit = window.fbAsyncInit || function () {
-        window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
-        window.fbMessengerPlugins.init();
-      };
-      setTimeout(function () {
-        (function (d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) { return; }
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      }, 0);
-      </script>
-
-      <div class="fb-customerchat" page_id="170378733070354" theme_color="#000000" ref="feel-chat">
-
-      </div> -->
-
-
-
-</body></html>
+  
+  <script>
+    feather.replace()
+  </script>
+</body>
+</html>
