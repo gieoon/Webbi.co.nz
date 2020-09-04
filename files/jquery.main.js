@@ -19,8 +19,8 @@ jQuery(function() {
 	if (!isIE) {
 		initStarActive();
 	} else {
-		jQuery('body.homepage .top-inforamtiom').css('backgroundImage', 'url(images/bg-stars.png)');
-		console.log(jQuery('body.homepage .top-inforamtiom'));
+		jQuery('body.homepage .top-information').css('backgroundImage', 'url(images/bg-stars.png)');
+		console.log(jQuery('body.homepage .top-information'));
 	}
 
 	initCustomHover();
@@ -463,7 +463,7 @@ function initChangeColor() {
 }
 
 function initParalax() {
-	jQuery('.top-inforamtiom').each(function() {
+	jQuery('.top-information').each(function() {
 		var holder = jQuery(this);
 		var decoration = holder.find('.austronaut');
 
@@ -613,7 +613,7 @@ function initStarActive() {
 	var activeClass = 'stars-active';
 	var page = jQuery('body');
 
-	jQuery('.top-inforamtiom').each(function() {
+	jQuery('.top-information').each(function() {
 		var holder = jQuery(this);
 		var holderTop;
 		var holderHeight;
