@@ -2,7 +2,7 @@ jQuery(function() {
 	// Get IE or Edge browser version
 	var isIE = detectIE();
 
-	initMoonParallax();
+	// initMoonParallax();
 
 	//console.log(isIE);
 
@@ -39,6 +39,7 @@ jQuery(function() {
 	initAnchors();
 });
 
+// Lags
 function initMoonParallax(){
 	// console.log('moon init')
 	document.getElementsByTagName("body")[0].onscroll = function myFunction() { 
@@ -46,7 +47,7 @@ function initMoonParallax(){
 		var scrolltotop = document.scrollingElement.scrollTop;
 		var target = document.getElementById("moon");
 		var xvalue = "center";
-		var factor = .75;
+		var factor = .85;
 		var yvalue = scrolltotop * factor;
 		target.style.backgroundPosition = xvalue + " " + yvalue + "px";
 	}
@@ -477,7 +478,7 @@ function initParalax() {
 		var decoration = holder.find('.austronaut');
 
 		function mousemoveHandler(e) {
-			decoration.parallax(40, e);
+			decoration.parallax(30, e);
 		}
 
 		jQuery(document).on('mousemove', mousemoveHandler);

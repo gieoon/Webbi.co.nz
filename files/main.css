@@ -908,7 +908,7 @@ body.homepage #nav .nav-opener span:before
 
 .step-form .steps-holder p
 {
-    padding-bottom: 70px;
+    padding-bottom: 20px;
 }
 
 .step-form .steps-holder.active-step .checkbox-block
@@ -944,10 +944,6 @@ body.homepage #nav .nav-opener span:before
     /* -webkit-transform: translateX(-100%);
             transform: translateX(-100%); */
     vertical-align: top;
-}
-
-.step-form .checkbox-block p {
-    text-align: center!important;
 }
 
 .step-form .inputs-block
@@ -2931,7 +2927,7 @@ textarea:focus
     .form-section {
 
     }
-    
+
     .about-section
     {
         padding: 78px 0 64px;
@@ -3894,7 +3890,17 @@ textarea:focus
     text-align: center;
     line-height: 28px;
     }
+    
     .simple-content h3 {
+        text-align: center;
+    }
+
+    .about-section
+    {
+        padding: 78px 0 64px;
+    }
+
+    .step-form .checkbox-block p {
         text-align: center;
     }
 }
