@@ -96,7 +96,7 @@ gtag('js', new Date());
             <a class="navbar-brand change-color" href="https://webbi.co.nz">
               <picture class="white-logo">
                 <!--[if IE 9]><video style="display: none;"><![endif]-->
-                <source srcset="images/icon.png, images/iconx.png 2x" media="(max-width: 767px)">
+                <source srcset="images/icon.png, images/icon.png 2x" media="(max-width: 767px)">
                 <source srcset="images/icon.png">
                 <!--[if IE 9]></video><![endif]-->
                 <img src="./images/icon.png" alt="Webbi">
@@ -117,9 +117,9 @@ gtag('js', new Date());
               <div class="nav-holder">
                 <ul class="nav navbar-nav">
                   <li><a href="#webbi">Webbi Digital Designs</a></li>
-                  <li><a href="#How-we-do-it">We can cater to all requirements</a></li>
-                  <li><a href="#whatwedo">What we do</a></li>
+                  <li><a href="#How-we-do-it">Why us</a></li>
                   <li><a href="#Stuff-that-worked">Our Work</a></li>
+                  <li><a href="#about">About us</a></li>
                   <li><a href="#contact">Get in Touch</a></li>
                 </ul>
               </div>
@@ -192,7 +192,8 @@ gtag('js', new Date());
                     <img src="./images/time.svg" alt="" />
                   </span>
                   <span class="letter-explanation">Changes in 2 minutes</span>
-                  <p>There's no need to contact us or a content manager each time you want to make an update. We've got a super easy system to let you make the changes you need instantly.</p>
+                  <!-- There's no need to contact a content manager every time you need to make an update.  -->
+                  <p>We've creating a super easy system to let you make the changes you need instantly.</p>
                 </li>
                 <li>
                   <span class="letter">
@@ -206,14 +207,14 @@ gtag('js', new Date());
                     <img src="./images/different.svg" alt="" />
                   </span>
                   <span class="letter-explanation">Unique</span>
-                  <p>Your website will be custom designed and unique to your vision and what you want to achieve.</p>
+                  <p>Your website will be custom designed and unique to your vision.</p>
                 </li>
                 <li>
                   <span class="letter">
                     <img src="./images/rocket.svg" alt="" />
                   </span>
                   <span class="letter-explanation">Fast Scaling</span>
-                  <p>We have the skills available to help you scale your website to a full platform should the need arise. You can sit back and elt us take care of all of the technical challenges.</p>
+                  <p>Should the need arise, we are equipped to help you scale your website to the next level. You can sit back and let us take care of the technical hurdles.</p>
                 </li>
               </ul>
   <!-- <p><br></p><p>Somewhat curious? Here’s a bit more about the <a href="https://webbi.co.nz/howwework">uncommon way we work </a>and <a href="https://webbi.co.nz/whatwedo">what we do.</a></p> -->
@@ -221,6 +222,8 @@ gtag('js', new Date());
           </div>
         </div>
       </div>
+
+      <!-- <p>We help you make money by integrating into a e-commerce platform.</p> -->
       <section class="stuff-section" id="Stuff-that-worked">
         <div class="container">
           <div class="row">
@@ -278,7 +281,7 @@ gtag('js', new Date());
                   </div>
                   <div class="works">
                     <span class="works-title">
-                      <a href="https://imhired.com" target="_blank" rel="noopener noreferrer">
+                      <a href="https://imhired.co.nz" target="_blank" rel="noopener noreferrer">
                         <span class="title">Hired!</span>
                         <span class="subtitle">Coming soon page for Unique recruitment concept targeting recent Graduates.</span>
                       </a>
@@ -344,53 +347,87 @@ gtag('js', new Date());
         </div>
       </section>
 
+      <section class="about-section" id="about">
+        <h2 class="section-title">About us</h2>
+        <p>We're a passionate Web Design & Development Studio located in Nelson on New Zealand's South Island. 
+          We're comfortable with a variety of modern technologies to help you grow your business.
+          <br/><br/>
+          If you're not sure what you want you can also get in touch with us for a quick discussion on your options and possibilities.
+        </p>
+      </section>
+      <!-- "http://webbiconz-consulting.ts.r.appspot.com/index.php" -->
+      <!-- "http://localhost:9000/index.php"  -->
       <!-- Using Google Forms -->
+      <!-- enctype="multipart/form-data" -->
+      <!-- target-page="thankyou" -->
       <section class="form-section " id="contact">
-        <form action="http://localhost:9000/contact.php" method="post" enctype="multipart/form-data" target-page="thankyou" class="step-form form-validation" target="frame">
-          <fieldset>
+      
+        <form 
+          action="http://webbiconz-consulting.ts.r.appspot.com/index.php"
+          method="post" class="step-form form-validation" target="frame">
             <div class="container steps-holder">
               <div class="row">
                 <div class="col-xs-12 text-center">
                   <h2 class="section-title">Get in Touch</h2>
-                  <p>Contact us and get an instant quote.</p>
+                  <p>Contact us for an instant quote.</p>
                 </div>
               </div>
               <div id="form-wrapper">
                 <div id="left-wrapper">
                   <div>
                     <label for="form-name">Name</label>
-                    <input id="form-name" type="text" name="name" placeholder="Your name..." required="">
+                    <input id="form-name" type="text" name="uname" placeholder="Your name..." required="">
                   </div>
                   <div>
                     <label for="form-email">Email</label>
-                    <input id="form-email" type="email" name="email" placeholder="Your email..." required="">
+                    <input id="form-email" type="email" name="uemail" placeholder="Your email..." required="">
                   </div>
                   <div>
                     <label for="form-description">Product Description</label>
-                    <textarea name="form-description" cols="30" rows="6" placeholder="What you want to make..." required=""></textarea>
+                    <textarea name="udescription" cols="30" rows="6" placeholder="What you want to make..." required=""></textarea>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 checkbox-block">
                   
-                  <p>I need help with a:</p>
+                  <p style="padding-bottom: 10px;text-align: left;">I need help with a:</p>
                   <div>
                     <label class="checkbox-wrapper">Website
-                      <input type="checkbox" id="type-website" name="contacts[]" value="Website" checked="checked">
+                      <input type="checkbox" name="check_list[]" value="Website" checked="checked">
                       <span class="checkmark"></span>
                     </label>
 
                     <label class="checkbox-wrapper">Mobile Application
-                      <input type="checkbox" id="type-mobile" name="contacts[]" value="Mobile Application">
+                      <input type="checkbox" name="check_list[]" value="Mobile Application">
                       <span class="checkmark"></span>
                     </label>
 
                     <label class="checkbox-wrapper">Brand Design
-                      <input type="checkbox" id="type-brand" name="contacts[]" value="Brand Design">
+                      <input type="checkbox" name="check_list[]" value="Brand Design">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <label class="checkbox-wrapper">E-Commerce
+                      <input type="checkbox" name="check_list[]" value="E-Commerce">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <label class="checkbox-wrapper">Shopify
+                      <input type="checkbox" name="check_list[]" value="Shopify">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <label class="checkbox-wrapper">Wordpress
+                      <input type="checkbox" name="check_list[]" value="Wordpress">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <label class="checkbox-wrapper">New platform to disrupt an industry
+                      <input type="checkbox" name="check_list[]" value="New platform to disrupt an industry">
                       <span class="checkmark"></span>
                     </label>
 
                     <label class="checkbox-wrapper">Not sure, discuss a strategy
-                      <input type="checkbox" id="type-other" name="contacts[]" value="Other">
+                      <input type="checkbox" name="check_list[]" value="Other" />
                       <span class="checkmark"></span>
                     </label>
                   </div>
@@ -399,13 +436,12 @@ gtag('js', new Date());
 
               <div class="row">
                 <div class="col-xs-12 text-center submit-col">
-                  <a href="https://webbi.co.nz/#" class="prev-step open item-link ion-ios-arrow-thin-left">Previous step</a>
-                  <button type="submit" name="mail_submit" class="item-link ion-ios-arrow-thin-right">Send it our way</button>
+                  <!-- <a href="https://webbi.co.nz/#" class="prev-step open item-link ion-ios-arrow-thin-left">Previous step</a> -->
+                  <button type="submit" name="mail_submit" class="item-link ion-ios-arrow-thin-right" style="padding-bottom: 64px;">Send it our way</button>
                   <input type="hidden" value="1" name="mail_submit">
                 </div>
               </div>
             </div>
-          </fieldset>
         </form>
       </section>
 
