@@ -2163,6 +2163,19 @@ input, textarea {
     padding: 24px 0;
 }
 
+
+#contact-after {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 64px 0;
+}
+
+#witch {
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
 #left-wrapper {
     width: 45%;
     margin-right: 5%;
@@ -2915,10 +2928,13 @@ textarea:focus
         /* margin: 0 0 98px; */
     }
 
-    .form-section,
+    .form-section {
+
+    }
+    
     .about-section
     {
-        padding: 78px 0 0px;
+        padding: 78px 0 64px;
     }
 
     .about-section p {

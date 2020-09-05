@@ -24,9 +24,9 @@
         $solutions .= $selected."</br>";
     }
 
-    $outgoing = "Inquiry at: " . time() . " \n\nProject Description: " . wordwrap($msg,200) . "\n\nCLIENT NAME: " . $name . "\nCLIENT EMAIL: " . $email . "\nNEEDS HELP WITH: " . $solutions;
+    $outgoing = "Inquiry at: " . date('Y-m-d H:i:s', time())  . " \n\nProject Description: " . wordwrap($msg,200) . "\n\nCLIENT NAME: " . $name . "\nCLIENT EMAIL: " . $email . "\nNEEDS HELP WITH: " . $solutions;
 
-    file_put_contents( 'debug' . time() . '.log', var_export( $outgoing, true));
+    file_put_contents( 'debug' . date('Y-m-d H:i:s', time()) . '.log', var_export( $outgoing, true));
 
     // // send email
     mail("jun.a.kagaya@gmail.com","WEBBI CONSULTING | WEB ENQUIRY",$outgoing);

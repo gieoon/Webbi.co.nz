@@ -1524,7 +1524,7 @@ ResponsiveHelper = (function($){
 		};
 
 	}());
-
+	
 
 	// custom mousewheel/trackpad handler
 

@@ -32,6 +32,7 @@
   <!-- <script id="facebook-jssdk" src="./files/sdk(1).js"></script> -->
   <script type="text/javascript" src="./files/three.min.js" defer=""></script>
   <script type="text/javascript" src="./files/detector.js" defer=""></script>
+  <script type="text/javascript" src="./files/additional.js" defer=""></script>
   <script src="https://unpkg.com/feather-icons"></script>
 
   <script id="vs" type="x-shader/x-vertex" defer="">
@@ -360,6 +361,11 @@ gtag('js', new Date());
       <!-- Using Google Forms -->
       <!-- enctype="multipart/form-data" -->
       <!-- target-page="thankyou" -->
+      <section class="form-section" id="contact-after" style="display: none;border-top: 1px solid black;">
+        <img id="witch" src="./images/witch.svg" alt=""/>
+        <h2>Thanks, we'll get back to you shortly.</h2>
+        <p style="text-align: right;width: 80%;font-size:16px;">- The Webbi team</p>
+      </section>
       <section class="form-section " id="contact">
       
         <form 
@@ -437,8 +443,8 @@ gtag('js', new Date());
               <div class="row">
                 <div class="col-xs-12 text-center submit-col">
                   <!-- <a href="https://webbi.co.nz/#" class="prev-step open item-link ion-ios-arrow-thin-left">Previous step</a> -->
-                  <button type="submit" name="mail_submit" class="item-link ion-ios-arrow-thin-right" style="padding-bottom: 64px;">Send it our way</button>
-                  <input type="hidden" value="1" name="mail_submit">
+                  <button type="submit" name="mail_submit" onclick="submitPressed()" class="item-link ion-ios-arrow-thin-right" style="padding-bottom: 64px; outline: none!important;">Send it our way</button>
+                  <input type="hidden" value="1" name="mail_submit" onclick="submitPressed()" style="outline: none!important;">
                 </div>
               </div>
             </div>
@@ -467,7 +473,6 @@ gtag('js', new Date());
               </p>
               <p>Icons made by <a href="https://www.flaticon.com/free-icon/product_2362021?term=different&page=1&position=4" title="ultimatearm">ultimatearm</a>, <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
             <!-- <div class="col-xs-12 col-sm-3 col-md-2"> -->
-              
               <p class="copyright">© Webbi Digital Designs 2020</p>
           </div>
         </div>
