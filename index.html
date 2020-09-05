@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="./files/ionicons.css">
   <link rel="stylesheet" href="./files/bootstrap-extended.css">
   <link rel="stylesheet" href="./files/main.css">
+  <link rel="stylesheet" href="./files/checkbox.css">
   
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;800&display=swap" rel="stylesheet">
 
@@ -115,11 +116,11 @@ gtag('js', new Date());
               <a class="nav-opener" href="/"><span></span></a>
               <div class="nav-holder">
                 <ul class="nav navbar-nav">
-                  <li><a href="#What-we-do">Who we are</a></li>
-                  <li><a href="#How-we-do-it">How we work</a></li>
+                  <li><a href="#webbi">Webbi Digital Designs</a></li>
+                  <li><a href="#How-we-do-it">We can cater to all requirements</a></li>
                   <li><a href="#whatwedo">What we do</a></li>
-                  <li><a href="#Stuff-that-worked">Stuff that worked</a></li>
-                  <li><a href="#Let%E2%80%99s-talk">Let’s talk</a></li>
+                  <li><a href="#Stuff-that-worked">Our Work</a></li>
+                  <li><a href="#contact">Get in Touch</a></li>
                 </ul>
               </div>
             </div>
@@ -128,7 +129,7 @@ gtag('js', new Date());
       </div>
     </header>
     <main id="main" role="main">
-      <section class="top-information">
+      <section class="top-information" id="webbi">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 column">
@@ -170,6 +171,7 @@ gtag('js', new Date());
           </div>
         </div>
         
+        <!-- TODO comment this out for testing -->
         <div id="clouds" style="background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAPSCAYAAAAayNh7AAACQUlEQVR4Xu3QQREAAAABQfqXFsNnFTizzXk99+MAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQGB3rQPTUy1EXwAAAABJRU5ErkJggg==&quot;) 0% 0% / 32px 100%;">
           <canvas width="1920" height="929" style="width: 1920px; height: 929px;">
           </canvas>
@@ -341,8 +343,10 @@ gtag('js', new Date());
           </div>
         </div>
       </section>
-      <section class="form-section " id="Let’s-talk">
-        <form action="https://webbi.co.nz/mail.php" method="post" enctype="multipart/form-data" target-page="thankyou" class="step-form form-validation">
+
+      <!-- Using Google Forms -->
+      <section class="form-section " id="contact">
+        <form action="http://localhost:9000/contact.php" method="post" enctype="multipart/form-data" target-page="thankyou" class="step-form form-validation" target="frame">
           <fieldset>
             <div class="container steps-holder">
               <div class="row">
@@ -351,61 +355,48 @@ gtag('js', new Date());
                   <p>Contact us and get an instant quote.</p>
                 </div>
               </div>
-              <div class="row steps-row">
-                <div class="col-xs-12 col-sm-6 col-md-offset-1 inputs-block">
-                  <div class="holder">
-                    <div class="field-holder required-holder">
-                      <textarea name="umessage" class="required" cols="30" rows="10" placeholder="My project is..." required=""></textarea>
-                    </div>
-                    <div class="field-holder required-holder">
-                      <input name="ufname" class="required" type="text" placeholder="My name is..." required="">
-                    </div>
-                    <div class="field-holder required-holder">
-                      <input name="umail" class="required-email" type="email" placeholder="My email is..." required="">
-                    </div>
+              <div id="form-wrapper">
+                <div id="left-wrapper">
+                  <div>
+                    <label for="form-name">Name</label>
+                    <input id="form-name" type="text" name="name" placeholder="Your name..." required="">
+                  </div>
+                  <div>
+                    <label for="form-email">Email</label>
+                    <input id="form-email" type="email" name="email" placeholder="Your email..." required="">
+                  </div>
+                  <div>
+                    <label for="form-description">Product Description</label>
+                    <textarea name="form-description" cols="30" rows="6" placeholder="What you want to make..." required=""></textarea>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 checkbox-block">
-                  <div class="required-holder check-list">
-                    <span class="label-col">I need help with a:</span>
-                    <div class="check-row">
-                      <span class="jcf-checkbox jcf-checked"><span></span><input data-type="at_least_one" name="needs[]" value="website" data-name="uniq____" id="id-check1" checked="checked" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check1" class="jcf-label-active">Website</label>
-                    </div>
-                    <div class="check-row">
-                      <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="mobile app" data-name="uniq____" id="id-check2" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check2">Mobile Application</label>
-                    </div>
-                    <!-- <div class="check-row">
-                      <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="digital strategy" data-name="uniq____" id="id-check3" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check3">digital strategy</label>
-                    </div> -->
-                    <!-- <div class="check-row">
-                      <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="banner campaign" data-name="uniq____" id="id-check4" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label data-required="true" for="id-check4">banner campaign</label>
-                    </div> -->
-                    <div class="check-row">
-                      <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="brand design" data-name="uniq____" id="id-check5" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check5">Brand Design</label>
-                    </div>
-                    <!-- <div class="check-row">
-                      <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="video" data-name="uniq____" id="id-check6" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check6">video</label>
-                    </div> -->
-                    <!-- <div class="check-row">
-                      <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="digital newsletter" data-name="uniq____" id="id-check7" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check7">digital newsletter</label>
-                    </div> -->
-                    <div class="check-row">
-                      <span class="jcf-checkbox jcf-unchecked"><span></span><input data-type="at_least_one" name="needs[]" value="not sure" data-name="uniq____" id="id-check8" type="checkbox" style="position: absolute; height: 100%; width: 100%; opacity: 0; margin: 0px;"></span>
-                      <label for="id-check8">Not sure, discuss a strategy</label>
-                    </div>
-                    <div class="btn-holder text-center">
-                      <a href="https://webbi.co.nz/#" class="next-step open item-link ion-ios-arrow-thin-right">Next step</a>
-                    </div>
+                  
+                  <p>I need help with a:</p>
+                  <div>
+                    <label class="checkbox-wrapper">Website
+                      <input type="checkbox" id="type-website" name="contacts[]" value="Website" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <label class="checkbox-wrapper">Mobile Application
+                      <input type="checkbox" id="type-mobile" name="contacts[]" value="Mobile Application">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <label class="checkbox-wrapper">Brand Design
+                      <input type="checkbox" id="type-brand" name="contacts[]" value="Brand Design">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <label class="checkbox-wrapper">Not sure, discuss a strategy
+                      <input type="checkbox" id="type-other" name="contacts[]" value="Other">
+                      <span class="checkmark"></span>
+                    </label>
                   </div>
                 </div>
               </div>
+
               <div class="row">
                 <div class="col-xs-12 text-center submit-col">
                   <a href="https://webbi.co.nz/#" class="prev-step open item-link ion-ios-arrow-thin-left">Previous step</a>
@@ -417,30 +408,36 @@ gtag('js', new Date());
           </fieldset>
         </form>
       </section>
+
+      <!-- Halts redirection -->
+      <iframe name="frame"></iframe>
       
     </main>
-    <footer id="footer">
-      <div class="container">
-        <div class="pattern-section">
-            <p><i data-feather="home"></i><strong>34 Olympus Way, Richmond, Nelson, New Zealand, 7020</strong></p>
-            <p>
-              <i data-feather="phone"></i>
-              <a href="tel:+61296902592">(+64) 022-091-0069</a>
-            </p>
-            <p>
-              <a href="mailto:jun.a.kagaya@gmail.com">
-                <i data-feather="mail"></i>
-                jun.a.kagaya@gmail.com
-              </a>
-            </p>
-            <p>Icons made by <a href="https://www.flaticon.com/free-icon/product_2362021?term=different&page=1&position=4" title="ultimatearm">ultimatearm</a>, <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
-          <!-- <div class="col-xs-12 col-sm-3 col-md-2"> -->
-            
-            <p class="copyright">© Webbi 2020</p>
+    <section class="footer-information">
+      <footer id="footer" >
+        <canvas id="canvas2" width="1920" height="400"></canvas>
+        <div class="container">
+          <div class="pattern-section">
+              <p><i data-feather="home"></i><strong>34 Olympus Way, Richmond, Nelson, New Zealand, 7020</strong></p>
+              <p>
+                <i data-feather="phone"></i>
+                <a href="tel:+61296902592">(+64) 022-091-0069</a>
+              </p>
+              <p>
+                <a href="mailto:jun.a.kagaya@gmail.com">
+                  <i data-feather="mail"></i>
+                  jun.a.kagaya@gmail.com
+                </a>
+              </p>
+              <p>Icons made by <a href="https://www.flaticon.com/free-icon/product_2362021?term=different&page=1&position=4" title="ultimatearm">ultimatearm</a>, <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+            <!-- <div class="col-xs-12 col-sm-3 col-md-2"> -->
+              
+              <p class="copyright">© Webbi Digital Designs 2020</p>
+          </div>
         </div>
-      </div>
-      <canvas id="canvas" width="1920" height="929"></canvas>
-    </footer>
+      </footer>
+      
+    </section>
   </div>
   
   <script>

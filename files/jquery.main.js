@@ -100,7 +100,7 @@ function initNavAddClass() {
 		}
 
 		win.on('scroll', scrollhandler);
-		win.on('resize orientationchange', resizeHanler);
+		win.on('resize orientationchange', resizeHandler);
 		resizeHandler();
 	});
 }
@@ -344,75 +344,82 @@ function initValidation(holder) {
 function initCanvas() {
 	var win = jQuery(window);
 
-	jQuery('#canvas').each(function() {
-		var canvas = this;
-		var ctx = canvas.getContext("2d");
-		var fps = 30;
-		var winWidth, winHeight;
-		var mp; //max particles
-		var particles = [];
+	for(var c of ['#canvas','#canvas2']){
+		jQuery(c).each(function() {
+			var canvas = this;
+			var ctx = canvas.getContext("2d");
+			var fps = 30;
+			var winWidth, winHeight;
+			var mp; //max particles
+			var particles = [];
+			console.log('drawing on canvas')
 
-		resizeHandler();
+			resizeHandler();
 
-		function draw() {
-			ctx.clearRect(0, 0, winWidth, winHeight);
+			function draw() {
+				ctx.clearRect(0, 0, winWidth, winHeight);
 
-			ctx.fillStyle = "#fff";
-			ctx.beginPath();
-			for(var i = 0; i < mp; i++) {
-				var p = particles[i];
-				ctx.moveTo(p.x, p.y);
-				ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+				ctx.fillStyle = "#fff";
+				// ctx.fillStyle = "#FFBD69";
+				ctx.beginPath();
+				for(var i = 0; i < mp; i++) {
+					var p = particles[i];
+					ctx.moveTo(p.x, p.y);
+					ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+				}
+				ctx.fill();
+				update();
 			}
-			ctx.fill();
-			update();
-		}
 
-		function update() {
-			for(var i = 0; i < mp; i++) {
-				var p = particles[i];
-				p.y += Math.cos(p.d) + 1 + p.r/2;
-					if(p.y > winHeight) {
-						if(i%3 > 0) //66.67% of the flakes
-					{
-						particles[i] = {x: Math.random() * winWidth, y: -10, r: p.r, d: p.d};
+			function update() {
+				for(var i = 0; i < mp; i++) {
+					var p = particles[i];
+					p.y += Math.cos(p.d) + 1 + p.r/2;
+						if(p.y > winHeight) {
+							if(i%3 > 0) //66.67% of the flakes
+						{
+							particles[i] = {x: Math.random() * winWidth, y: -10, r: p.r, d: p.d};
+						}
 					}
 				}
 			}
-		}
 
-		function resizeHandler() {
-			//canvas dimensions
-			winWidth = window.innerWidth;
-			winHeight = window.innerHeight;
+			function resizeHandler() {
+				//canvas dimensions
+				winWidth = window.innerWidth;
+				winHeight = window.innerHeight;
 
-			canvas.width = winWidth;
-			canvas.height = winHeight;
+				canvas.width = winWidth;
+				canvas.height = winHeight;
+				if(canvas.id === "canvas2"){
+					canvas.height = 400;
+				}
 
-			mp = 0.35 * winWidth;
+				mp = 0.35 * winWidth;
 
-			particles = [];
+				particles = [];
 
-			for(var i = 0; i < mp; i++){
-				particles.push({
-					x: Math.random() * winWidth, //x-coordinate
-					y: Math.random() * winHeight, //y-coordinate
-					r: Math.random() * 1.5, //radius
-					d: Math.random() * mp //density
-				})
-			}
-		};
+				for(var i = 0; i < mp; i++){
+					particles.push({
+						x: Math.random() * winWidth, //x-coordinate
+						y: Math.random() * winHeight, //y-coordinate
+						r: Math.random() * 1.5, //radius
+						d: Math.random() * mp //density
+					})
+				}
+			};
 
-		win.on('resize', resizeHandler);
+			win.on('resize', resizeHandler);
 
-		function step() {
-			setTimeout(function() {
-				draw();
-				requestAnimationFrame(step);
-			}, 1200 / fps);
-		};
-		step();
-	});
+			function step() {
+				setTimeout(function() {
+					draw();
+					requestAnimationFrame(step);
+				}, 1200 / fps);
+			};
+			step();
+		});
+	}
 }
 
 function initChangeColor() {
@@ -613,36 +620,41 @@ function initStarActive() {
 	var activeClass = 'stars-active';
 	var page = jQuery('body');
 
-	jQuery('.top-information').each(function() {
-		var holder = jQuery(this);
-		var holderTop;
-		var holderHeight;
-		var flag = true;
+	for(var c of ['.top-information', '.footer-information']){
+		jQuery(c).each(function() {
+			var holder = jQuery(this);
+			var holderTop;
+			var holderHeight;
+			var flag = true;
 
-		function scrollHandler() {
-			if (win.scrollTop() < holderHeight + holderTop) {
-				if (flag) {
-					page.addClass(activeClass);
-					flag = false;
-				}
-			} else {
-				if (!flag) {
-					page.removeClass(activeClass);
-					flag = true;
+			// console.log(holderTop, holderHeight);
+
+			function scrollHandler() {
+				if (win.scrollTop() < holderHeight + holderTop) {
+					if (flag) {
+						page.addClass(activeClass);
+						flag = false;
+					}
+				} else {
+					if (!flag) {
+						page.removeClass(activeClass);
+						flag = true;
+					}
 				}
 			}
-		}
 
-		function resizeHandler() {
-			holderTop = holder.offset().top;
-			holderHeight = holder.innerHeight();
-			scrollHandler();
-		}
+			function resizeHandler() {
+				holderTop = holder.offset().top;
+				holderHeight = holder.innerHeight();
+				scrollHandler();
+			}
 
-		win.on('scroll', scrollHandler);
-		win.on('resize orientationchange', resizeHandler);
-		resizeHandler();
-	});
+			win.on('scroll', scrollHandler);
+			win.on('resize orientationchange', resizeHandler);
+			resizeHandler();
+		});
+	}
+	
 }
 
 // initialize custom form elements
