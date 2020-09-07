@@ -487,6 +487,8 @@ function initParalax() {
 
 function initClouds() {
 	var isTouchDevice = ('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch;
+	
+	// isTouchDevice = false;
 
 	if (isTouchDevice || !window.Detector) return;
 	if (!window.Detector && !window.Detector.webgl ) Detector.addGetWebGLMessage();

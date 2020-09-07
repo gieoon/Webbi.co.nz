@@ -503,7 +503,8 @@ body.homepage #nav .nav-opener span:before
 
 .intro-section h2
 {
-    margin: 0 0 25px;
+    /* margin: 0 0 25px; */
+    margin: 0 0 64px;
 }
 
 .abbr-list
@@ -1904,9 +1905,10 @@ input, textarea {
 
 #header
 {
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     z-index: 101;
-    top: 0;
+    top: 0!important;
     right: 0;
     left: 0;
 
@@ -2170,6 +2172,10 @@ input, textarea {
     max-width: 125px;
     margin: auto;
     margin-bottom: 1rem;
+}
+
+.about-section p {
+    padding: 2rem;
 }
 
 #left-wrapper {
@@ -3339,7 +3345,7 @@ textarea:focus
 
     #header
     {
-        /* top: 20px; */
+        /* top: 20px!important; */
 
         padding: 20px 0;
     }
@@ -3834,11 +3840,35 @@ textarea:focus
     }
 }
 
+/* iPad */
+@media (max-width: 769px) {
+    .works-title .title {
+        font-size: 4.5rem!important;
+    }
+    .works-title .subtitle {
+        font-size: 2.5rem;
+    }
+    .container {
+        padding-right: 30px!important;
+        padding-left: 30px!important;
+    }
+}
+
 @media (max-width: 767px)
 {
     #left-wrapper {
         margin-bottom: 9rem;
         width: 80%!important;
+    }
+
+    .top-information h1 {
+        font-size: 62px!important;
+    }
+
+    .austronaut 
+    {
+        top: -10rem!important;
+        right: 2rem!important;
     }
 
     .mobile-device .stuff-carousel .slide.hover .hover-block
