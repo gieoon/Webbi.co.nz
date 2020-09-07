@@ -690,6 +690,7 @@ body.homepage #nav .nav-opener span:before
     opacity: 0;
     padding: 8px;
     line-height: 1.2;
+    pointer-events: none;
 }
 
 .works-title * {
