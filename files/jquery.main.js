@@ -13,7 +13,6 @@ jQuery(function() {
 	}
 
 	initMobileNav();
-
 	
 
 	if (!isIE) {
@@ -56,6 +55,7 @@ function initMoonParallax(){
 jQuery(window).on('load', function() {
 	initChangeColor();
 	initNavAddClass();
+	// initFeatherHighlighter();
 });
 
 // add classes on hover/touch
@@ -484,7 +484,18 @@ function initParalax() {
 		jQuery(document).on('mousemove', mousemoveHandler);
 	});
 }
-
+/*
+function initFeatherHighlighter(){
+	console.log('initialized feather highlighter. ', document.getElementsByTagName('svg'))
+	Array.from(document.getElementsByTagName('svg')).forEach((el)=>{
+		console.log(el)
+		el.stroke = "blue";
+		el.onClick = ()=>{
+			console.og('eleement hoveered: ', el);
+		}
+	})
+}
+*/
 function initClouds() {
 	var isTouchDevice = ('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch;
 	
